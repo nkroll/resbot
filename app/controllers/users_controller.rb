@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @experiences = @user.experiences
+    @educations = @user.educations
     
 
     respond_to do |format|

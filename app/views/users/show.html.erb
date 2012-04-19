@@ -1,4 +1,3 @@
-<%= @experience %>
 <div style="float:right; margin-right:10px">
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %> 
@@ -72,7 +71,7 @@
                 <h3 class="main-heading"><span>Experience</span></h3>   
                 <ul class="timeline">
  				<!-- Show User's Experience sorted by Experience.list_order -->
-                   <% @experiences.each do |work| %>
+                   <% @experiences.order("list_order ASC").each do |work| %>
 					<li>                                          
                         <div class="timelineUnit">
                             <h4><%= work.title %><span class="timelineDate"><%= work.date %></span></h4>
@@ -85,17 +84,8 @@
 					<% end %>
 				<!-- End Experiences Loop -->
 
-                    <!-- <li>
-                 
-                        <div class="timelineUnit">
-                            <h4>Managing Partner<span class="timelineDate">2010 - Present</span></h4>
-                            <h5><a href="http://www.generationchicago">Generation Real Estate</a></h5>
-                            <p>Performed due diligence on over $125MM worth of mixed-used investment properties; Brokered over $10MM in rentals and sales to date.</p>
-                            <p>Working with <a href="http://redsquirrel.com/dave/">Dave Hoover</a> and <a href="http://www.doejo.com">Doejo</a> to launch as we speak.</p>
-                        </div>
-                    </li>
+                    <!-- 
                     <li>
-             
                         <div class="timelineUnit">
                             <h4>Credit and Treasury Analyst<span class="timelineDate">2006 - 2010</span></h4>
                             <h5><a href="http://www.baml.com">Bank of America</a></h5>
@@ -109,22 +99,29 @@
                 <!-- Timeline for Education  -->   
                 <h3 class="main-heading"><span>Education</span></h3>   
                  <ul class="timeline">
+	 				<!-- Show User's Education sorted by Education.list_order -->
+	                   <% @educations.order("list_order ASC").each do |educ| %>
+						
                     <li>            
                         <div class="timelineUnit">
-                            <h4>Web Development<span class="timelineDate">Winter 2012</span></h4>
-                            <h5><a href="http://www.CodeAcademy.org">CodeAcademy.org</a></h5>
-                            <p>Skills: HTML, CSS, Ruby, Rails, Wordpress, Databases</p>
+                            <h4><%= educ.study %><span class="timelineDate"><%= educ.graduation %></span></h4>
+                            <h5><a href="<%= educ.institution_url %>"><%= educ.institution %></a></h5>
+							<% educ.edu_details.order("detail_order ASC").each do |descrip| %>
+							<p><%= descrip.detail %></p>
+							<% end %>
                         </div>
                     </li>
-                    <li>             
-                        <div class="timelineUnit">
-                            <h4>Real Estate Finance<span class="timelineDate">May 2009</span></h4>
-                            <h5><a href="http://kelley.iu.edu/">Indiana University, Kelley School of Business</a></h5>
-                            <p>Skills: Real Estate Investments, Developments, Valuations, Economics</p>
-                            <p>Awards: 1st Place, Benecki Case Competition (<a href="https://docs.google.com/open?id=0BwQHWJtjFgvKaDh3UldPWWRqcG8">See Bottom Page 6</a> )</p>
-                        </div>
-                    </li>
-                    <div class="clear"></div>
+					<% end %>
+
+                    <!-- <li>             
+                         <div class="timelineUnit">
+                             <h4>Real Estate Finance<span class="timelineDate">May 2009</span></h4>
+                             <h5><a href="http://kelley.iu.edu/">Indiana University, Kelley School of Business</a></h5>
+                             <p>Skills: Real Estate Investments, Developments, Valuations, Economics</p>
+                             <p>Awards: 1st Place, Benecki Case Competition (<a href="https://docs.google.com/open?id=0BwQHWJtjFgvKaDh3UldPWWRqcG8">See Bottom Page 6</a> )</p>
+                         </div>
+                     </li> -->
+                     <div class="clear"></div>
                 </ul> 
                 <!-- /Timeline for Education  -->              
             </div>
