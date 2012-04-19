@@ -1,0 +1,73 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :tagline %><br />
+    <%= f.text_field :tagline %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :emailshow %><br />
+    <%= f.check_box :emailshow %>
+  </div>
+  <div class="field">
+    <%= f.label :headshot_url %><br />
+    <%= f.text_field :headshot_url %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :facebookshow %><br />
+    <%= f.check_box :facebookshow %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook_url %><br />
+    <%= f.text_field :facebook_url %>
+  </div>
+  <div class="field">
+    <%= f.label :twittershow %><br />
+    <%= f.check_box :twittershow %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter_url %><br />
+    <%= f.text_field :twitter_url %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedinshow %><br />
+    <%= f.check_box :linkedinshow %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin_url %><br />
+    <%= f.text_field :linkedin_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

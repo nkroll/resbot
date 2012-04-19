@@ -1,0 +1,322 @@
+<div style="float:right; margin-right:10px">
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %> 
+</div> 
+
+<!-- Container -->
+<div id="container">
+
+    <!-- Top -->
+	<div class="top"> 
+    	<!-- Logo -->
+    	<div id="logo">
+        	<h2><%= @user.name %></h2>
+            <h4><%= @user.tagline %></h4>
+        </div>
+        <!-- /Logo -->
+        
+        <!-- Social Icons -->
+        <ul class="socialicons">
+        	<li><a href="#" class="social-text">SOCIAL PROFILES</a></li>
+        	<li><a href="<%= @user.facebook_url %>" class="social-facebook"></a></li>
+            <li><a href="<%= @user.twitter_url %>" class="social-twitter"></a></li>
+            <li><a href="<%= @user.linkedin_url %>" class="social-in"></a></li>
+        </ul>
+        <!-- /Social Icons -->
+    </div>
+    <!-- /Top -->
+    
+    <!-- Content -->
+    <div id="content" >
+    
+        <!-- Profile -->
+        <div id="profile"> 
+         	<!-- About section -->
+        	<div class="about">
+            	<div class="photo-inner">
+					<img src="../assets/<%= @user.headshot_url %>" height="186" />
+				</div>
+                <h1><%= @user.name %></h1>
+                <h3><%= @user.tagline %></h3>
+                <p><%= @user.description %></p>
+            </div>
+            <!-- /About section -->
+             
+            <!-- Personal info section -->
+        	<ul class="personal-info">
+				<li><label>Name</label><span><%= @user.name %></span></li>
+                <li><label>City</label><span><%= @user.city %></span></li>
+				<li><label>Email</label><span><%= @user.email %></span></li>
+				<li><label>Phone</label><span><%= @user.phone %></span></li>
+            </ul>
+            <!-- /Personal info section -->
+        </div>        
+        <!-- /Profile --> 
+
+        <!-- Menu -->
+        <div class="menu">
+        	<ul class="tabs">
+            	<li><a href="#profile" class="tab-profile">Profile</a></li>
+            	<li><a href="#resume" class="tab-resume">Resume</a></li>
+            	<!-- <li><a href="#portfolio" class="tab-portfolio">Portfolio</a></li>
+            	<li><a href="#contact" class="tab-contact">Contact</a></li> -->
+            </ul>
+        </div>
+        <!-- /Menu --> 
+        
+        <!-- Resume -->
+        <div id="resume">
+        	 <div class="timeline-section">
+                <!-- Timeline for Employment  -->   
+                <h3 class="main-heading"><span>Experience</span></h3>   
+                <ul class="timeline">
+                    <li>
+                                           
+                        <div class="timelineUnit">
+                            <h4>Chief Maid<span class="timelineDate">2012 - Present</span></h4>
+                            <h5><a href="http://www.leasemaid.com">LeaseMaid.com</a></h5>
+                            <p>Working with <a href="http://redsquirrel.com/dave/">Dave Hoover</a> and <a href="http://www.doejo.com">Doejo</a> to launch as we speak.</p>
+                        </div>
+                    </li>
+                    <li>
+                 
+                        <div class="timelineUnit">
+                            <h4>Managing Partner<span class="timelineDate">2010 - Present</span></h4>
+                            <h5><a href="http://www.generationchicago">Generation Real Estate</a></h5>
+                            <p>Performed due diligence on over $125MM worth of mixed-used investment properties; Brokered over $10MM in rentals and sales to date.</p>
+                        </div>
+                    </li>
+                    <li>
+             
+                        <div class="timelineUnit">
+                            <h4>Credit and Treasury Analyst<span class="timelineDate">2006 - 2010</span></h4>
+                            <h5><a href="http://www.baml.com">Bank of America</a></h5>
+                            <p><a href="https://docs.google.com/open?id=0BwQHWJtjFgvKYzQyYzI0ZDEtNzliNi00NWUwLTk1ZDItYzg1MWI3NWM2MzY5">Excelled in two interships</a> and graduated from a rotational Commercial training program after graduation.</p>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                </ul> 
+                <!-- /Timeline for Employment  -->
+
+                <!-- Timeline for Education  -->   
+                <h3 class="main-heading"><span>Education</span></h3>   
+                 <ul class="timeline">
+                    <li>            
+                        <div class="timelineUnit">
+                            <h4>Web Development<span class="timelineDate">Winter 2012</span></h4>
+                            <h5><a href="http://www.CodeAcademy.org">CodeAcademy.org</a></h5>
+                            <p>Skills: HTML, CSS, Ruby, Rails, Wordpress, Databases</p>
+                        </div>
+                    </li>
+                    <li>             
+                        <div class="timelineUnit">
+                            <h4>Real Estate Finance<span class="timelineDate">May 2009</span></h4>
+                            <h5><a href="http://kelley.iu.edu/">Indiana University, Kelley School of Business</a></h5>
+                            <p>Skills: Real Estate Investments, Developments, Valuations, Economics</p>
+                            <p>Awards: 1st Place, Benecki Case Competition (<a href="https://docs.google.com/open?id=0BwQHWJtjFgvKaDh3UldPWWRqcG8">See Bottom Page 6</a> )</p>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                </ul> 
+                <!-- /Timeline for Education  -->              
+            </div>
+            <div class="skills-section">
+                <!-- Skills -->
+                <h3 class="main-heading"><span>Real Estate Technology</span></h3> 
+                <ul class="skills">
+                    <li>
+                        <h4>Office Systems</h4>
+                        <span class="rat7"></span>
+                    </li>
+                    <li>
+                        <h4>Lead Generation</h4>
+                        <span class="rat7"></span>
+                    </li>
+                    <li>
+                        <h4>Task Automation</h4>
+                        <span class="rat7"></span>
+                    </li>
+                    <li>
+                        <h4>Expense Savings</h4>
+                        <span class="rat7"></span>
+                    </li>
+                </ul>
+           
+                <h3 class="main-heading"><span>Programming Skills</span></h3> 
+                <ul class="skills">
+                    <li>
+                        <h4>Ruby</h4>
+                        <span class="rat5"></span>
+                    </li>
+                    <li>
+                        <h4>Rails Framework</h4>
+                        <span class="rat4"></span>
+                    </li>
+                    <li>
+                        <h4>HTML</h4>
+                        <span class="rat6"></span>
+                    </li>
+                    <li>
+                        <h4>CSS</h4>
+                        <span class="rat6"></span>
+                    </li>
+                    <li>
+                        <h4>Wordpress</h4>
+                        <span class="rat5"></span>
+                    </li>
+                </ul>
+                <h3 class="main-heading"><span>Design Skills</span></h3> 
+                <ul class="skills">
+                    <li>
+                        <h4>Graphic Design</h4>
+                        <span class="rat1"></span>
+                    </li>
+                    <li>
+                        <h4>Web design</h4>
+                        <span class="rat5"></span>
+                    </li>
+                    <li>
+                        <h4>Print Design</h4>
+                        <span class="rat4"></span>
+                    </li>
+                </ul>
+             <!-- /Skills -->
+             </div>
+        </div>
+        <!-- /Resume --> 
+                                
+        <!-- Portfolio -->
+        <!-- <div id="portfolio">
+
+             <ul id="portfolio-filter">
+                <li><a href="" class="current" data-filter="*">All</a></li>
+                <li><a href="" data-filter=".webdesign">Loft Renovation</a></li>
+                <li><a href="" data-filter=".photoghraphy">Testimonials</a></li>
+                <li><a href="" data-filter=".webdesign">Presentations</a></li>
+            </ul>
+            <div class="extra-text">Work Portfolio</div>
+            <ul id="portfolio-list">
+                <li class="illustration print">
+                    <a href="portfolio/1.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque" rel="portfolio" class="folio">
+                        <img src="portfolio/1-thumb.jpg" alt="">
+                        <h2 class="title">Hello Goodbye</h2>
+                        <span class="categorie">Print / Illustration</span> 
+                    </a>
+            	</li>
+                <li class="webdesign">
+                    <a href="http://www.youtube.com/embed/c9MnSeYYtYY?autoplay=1" rel="portfolio" class="folio iframe">
+                        <img src="portfolio/3-thumb.jpg" alt="" >
+                        <h2 class="title">Snow time</h2>
+                        <span class="categorie">Webdesign</span> 
+                    </a>
+            	</li>                        
+                <li class="photoghraphy">
+                    <a href="http://www.google.com" rel="portfolio" target="_new">
+                        <img src="portfolio/2-thumb.jpg" alt="" >                            
+                        <h2 class="title">Help us</h2>
+                        <span class="categorie">Photography</span> 
+                    </a>
+            	</li>
+                <li class="animation print">
+                    <a href="portfolio/4.jpg" rel="portfolio" class="folio">
+                        <img src="portfolio/4-thumb.jpg" alt="" >
+                        <h2 class="title">Sunshine</h2>
+                        <span class="categorie">Print / Animation</span> 
+                    </a>
+            	</li>
+                <li class="animation">
+                    <a href="portfolio/5.jpg" rel="portfolio" class="folio">
+                        <img src="portfolio/5-thumb.jpg" alt="" >
+                        <h2 class="title">Come together</h2>
+                        <span class="categorie">Animation</span> 
+                    </a>
+            	</li>
+                <li class="webdesign print">
+                    <a href="portfolio/6.jpg" rel="portfolio" class="folio">
+                        <img src="portfolio/6-thumb.jpg" alt="" >
+                        <h2 class="title">The yellow</h2>
+                        <span class="categorie">Webdesign / Print</span> 
+                    </a>
+            	</li>
+                <li class="photoghraphy">
+                    <a href="portfolio/7.jpg" rel="portfolio" class="folio">
+                        <img src="portfolio/7-thumb.jpg" alt="" >
+                        <h2 class="title">Black bird</h2>
+                        <span class="categorie">Photoghraphy</span> 
+                    </a>
+            	</li>
+                <li class="illustration">
+                    <a href="portfolio/8.jpg" rel="portfolio" class="folio">
+                        <img src="portfolio/8-thumb.jpg" alt="" >
+                        <h2 class="title">Revolution</h2>
+                        <span class="categorie">Illustration</span> 
+                    </a>
+            	</li>
+            </ul>
+        </div> -->
+        <!-- /Portfolio -->   
+        
+        <!-- Contact -->
+        <!-- <div id="contact">
+        	<div id="map"></div> -->
+        	<!-- Contact Info -->
+            <!-- <div class="contact-info">
+            <h3 class="main-heading"><span>Downtown Address</span></h3>
+        	<ul>
+                <li><strong>Located in Willis Tower</strong></li>
+                <li>233 South Wacker Drive, #8400</li>
+				<li>Chicago, Illinois 60603</li>
+			</ui>
+			</div>
+			<div class="contact-info">
+            <h3 class="main-heading"><span>Suburban Address</span></h3>
+        	<ul>
+                <li><strong>Located in The Glen</strong></li>
+                <li>2638 Patriot Boulevard, #100</li>
+				<li>Glenview, Illinois 60026</li><br/>					
+            </ul>
+            </div>
+			<div class="contact-info">
+            <h3 class="main-heading"><span>Email Address</span></h3>
+        	<ul>
+                <li>kroll.nate@gmail.com</li>
+            </ul>
+            </div> -->
+            <!-- /Contact Info -->
+            
+            <!-- Contact Form -->
+            <!-- <div class="contact-form">
+                <h3 class="main-heading"><span>Let's Talk</span></h3>
+                <div id="contact-status"></div>
+                <form action="" id="contactform">
+                    <p>
+                    	<label for="name">Your Name</label>
+                    	<input type="text" name="name" class="input" >
+                    </p>
+                    <p>
+                    	<label for="email">Your Email</label>
+                    	<input type="text" name="email" class="input">
+                    </p>
+                    <p>
+                    	<label for="message">Your Message</label>
+                        <textarea name="message" cols="88" rows="6" class="textarea" ></textarea>
+                    </p>
+                    <input type="submit" name="submit" value="Send your message" class="submit">
+                </form>
+            </div> -->
+            <!-- /Contact Form -->
+        <!-- </div> -->
+        <!-- /contact -->  
+
+    </div>
+    <!-- /Content -->
+    
+    <!-- Footer -->
+	<div class="footer">
+    	<div class="copyright">Copyright © 2012 <%= @user.name %></div>
+    </div>
+    <!-- /Footer --> 
+    
+</div>
+<!-- /Container -->
+
