@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419130408) do
+ActiveRecord::Schema.define(:version => 20120419140724) do
 
   create_table "details", :force => true do |t|
     t.integer  "exp_or_edu"
@@ -58,6 +58,23 @@ ActiveRecord::Schema.define(:version => 20120419130408) do
     t.integer  "list_order"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "skill_sets", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "skill_name"
+    t.integer  "list_order"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "skills", :force => true do |t|
+    t.integer  "skill_set_id"
+    t.string   "title"
+    t.integer  "rank"
+    t.integer  "list_order"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

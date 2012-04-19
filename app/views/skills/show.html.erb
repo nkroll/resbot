@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Skill set:</b>
+  <%= @skill.skill_set_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @skill.title %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @skill.rank %>
+</p>
+
+<p>
+  <b>List order:</b>
+  <%= @skill.list_order %>
+</p>
+
+
+<%= link_to 'Edit', edit_skill_path(@skill) %> |
+<%= link_to 'Back', skills_path %>

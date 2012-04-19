@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   
   has_many :experiences
   has_many :educations
+  has_many :skill_sets
   has_many :exp_details, :through => :experiences
   has_many :edu_details, :through => :educations
-  
+  has_many :skills, :through => :skill_sets
 end

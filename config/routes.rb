@@ -1,4 +1,10 @@
 Resbot::Application.routes.draw do
+  
+  root :to => "pages#home"
+
+  resources :skills
+
+  resources :skill_sets
 
   resources :edu_details
 
@@ -7,8 +13,6 @@ Resbot::Application.routes.draw do
   resources :exp_details
 
   resources :experiences
-
-  root :to => "pages#home"
   
   resources :users
 

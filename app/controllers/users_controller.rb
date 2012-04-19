@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @experiences = @user.experiences
     @educations = @user.educations
+    @skillsets = @user.skill_sets
     
 
     respond_to do |format|

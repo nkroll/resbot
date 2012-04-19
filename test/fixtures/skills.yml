@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  skill_set_id: 1
+  title: MyString
+  rank: 1
+  list_order: 1
+
+two:
+  skill_set_id: 1
+  title: MyString
+  rank: 1
+  list_order: 1

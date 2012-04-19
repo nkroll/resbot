@@ -58,8 +58,11 @@
         	<ul class="tabs">
             	<li><a href="#profile" class="tab-profile">Profile</a></li>
             	<li><a href="#resume" class="tab-resume">Resume</a></li>
-            	<!-- <li><a href="#portfolio" class="tab-portfolio">Portfolio</a></li>
-            	<li><a href="#contact" class="tab-contact">Contact</a></li> -->
+            	
+				<!--Future Add-Ons
+ 				<li><a href="#portfolio" class="tab-portfolio">Portfolio</a></li>
+            	<li><a href="#contact" class="tab-contact">Contact</a></li>
+ 				End of Future Add-ons -->
             </ul>
         </div>
         <!-- /Menu --> 
@@ -70,7 +73,7 @@
                 <!-- Timeline for Employment  -->   
                 <h3 class="main-heading"><span>Experience</span></h3>   
                 <ul class="timeline">
- 				<!-- Show User's Experience sorted by Experience.list_order -->
+ 				<!-- Show User's Experience sorted by .list_order -->
                    <% @experiences.order("list_order ASC").each do |work| %>
 					<li>                                          
                         <div class="timelineUnit">
@@ -84,14 +87,6 @@
 					<% end %>
 				<!-- End Experiences Loop -->
 
-                    <!-- 
-                    <li>
-                        <div class="timelineUnit">
-                            <h4>Credit and Treasury Analyst<span class="timelineDate">2006 - 2010</span></h4>
-                            <h5><a href="http://www.baml.com">Bank of America</a></h5>
-                            <p><a href="https://docs.google.com/open?id=0BwQHWJtjFgvKYzQyYzI0ZDEtNzliNi00NWUwLTk1ZDItYzg1MWI3NWM2MzY5">Excelled in two interships</a> and graduated from a rotational Commercial training program after graduation.</p>
-                        </div>
-                    </li> -->
                     <div class="clear"></div>
                 </ul> 
                 <!-- /Timeline for Employment  -->
@@ -99,92 +94,39 @@
                 <!-- Timeline for Education  -->   
                 <h3 class="main-heading"><span>Education</span></h3>   
                  <ul class="timeline">
-	 				<!-- Show User's Education sorted by Education.list_order -->
-	                   <% @educations.order("list_order ASC").each do |educ| %>
-						
-                    <li>            
-                        <div class="timelineUnit">
-                            <h4><%= educ.study %><span class="timelineDate"><%= educ.graduation %></span></h4>
-                            <h5><a href="<%= educ.institution_url %>"><%= educ.institution %></a></h5>
-							<% educ.edu_details.order("detail_order ASC").each do |descrip| %>
-							<p><%= descrip.detail %></p>
-							<% end %>
-                        </div>
-                    </li>
+	 				<!-- Show User's Education sorted by .list_order -->
+	                   <% @educations.order("list_order ASC").each do |educ| %>	
+                	    <li>            
+	                        <div class="timelineUnit">
+	                            <h4><%= educ.study %><span class="timelineDate"><%= educ.graduation %></span></h4>
+	                            <h5><a href="<%= educ.institution_url %>"><%= educ.institution %></a></h5>
+								<% educ.edu_details.order("detail_order ASC").each do |descrip| %>
+								<p><%= descrip.detail %></p>
+								<% end %>
+	                        </div>
+	                    </li>
 					<% end %>
+					<!-- End Education Loop -->
 
-                    <!-- <li>             
-                         <div class="timelineUnit">
-                             <h4>Real Estate Finance<span class="timelineDate">May 2009</span></h4>
-                             <h5><a href="http://kelley.iu.edu/">Indiana University, Kelley School of Business</a></h5>
-                             <p>Skills: Real Estate Investments, Developments, Valuations, Economics</p>
-                             <p>Awards: 1st Place, Benecki Case Competition (<a href="https://docs.google.com/open?id=0BwQHWJtjFgvKaDh3UldPWWRqcG8">See Bottom Page 6</a> )</p>
-                         </div>
-                     </li> -->
                      <div class="clear"></div>
                 </ul> 
                 <!-- /Timeline for Education  -->              
             </div>
             <div class="skills-section">
                 <!-- Skills -->
-                <h3 class="main-heading"><span>Real Estate Technology</span></h3> 
+				<% @skillsets.each do |ski| %>
+
+                <h3 class="main-heading"><span><%= ski.skill_name %></span></h3> 
                 <ul class="skills">
+				<% ski.skills.each do |indski| %>
                     <li>
-                        <h4>Office Systems</h4>
-                        <span class="rat7"></span>
+                        <h4><%= indski.title %></h4>
+                        <span class="rat<%= indski.rank %>"></span>
                     </li>
-                    <li>
-                        <h4>Lead Generation</h4>
-                        <span class="rat7"></span>
-                    </li>
-                    <li>
-                        <h4>Task Automation</h4>
-                        <span class="rat7"></span>
-                    </li>
-                    <li>
-                        <h4>Expense Savings</h4>
-                        <span class="rat7"></span>
-                    </li>
+				<% end %>
                 </ul>
-           
-                <h3 class="main-heading"><span>Programming Skills</span></h3> 
-                <ul class="skills">
-                    <li>
-                        <h4>Ruby</h4>
-                        <span class="rat5"></span>
-                    </li>
-                    <li>
-                        <h4>Rails Framework</h4>
-                        <span class="rat4"></span>
-                    </li>
-                    <li>
-                        <h4>HTML</h4>
-                        <span class="rat6"></span>
-                    </li>
-                    <li>
-                        <h4>CSS</h4>
-                        <span class="rat6"></span>
-                    </li>
-                    <li>
-                        <h4>Wordpress</h4>
-                        <span class="rat5"></span>
-                    </li>
-                </ul>
-                <h3 class="main-heading"><span>Design Skills</span></h3> 
-                <ul class="skills">
-                    <li>
-                        <h4>Graphic Design</h4>
-                        <span class="rat1"></span>
-                    </li>
-                    <li>
-                        <h4>Web design</h4>
-                        <span class="rat5"></span>
-                    </li>
-                    <li>
-                        <h4>Print Design</h4>
-                        <span class="rat4"></span>
-                    </li>
-                </ul>
+				<% end %>
+ 
              <!-- /Skills -->
              </div>
         </div>
