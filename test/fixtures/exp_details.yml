@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  experience_id: 1
+  detail: MyString
+  detail_order: 1
+
+two:
+  experience_id: 1
+  detail: MyString
+  detail_order: 1

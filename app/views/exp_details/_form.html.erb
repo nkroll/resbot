@@ -1,0 +1,29 @@
+<%= form_for(@exp_detail) do |f| %>
+  <% if @exp_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exp_detail.errors.count, "error") %> prohibited this exp_detail from being saved:</h2>
+
+      <ul>
+      <% @exp_detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :experience_id %><br />
+    <%= f.number_field :experience_id %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br />
+    <%= f.text_field :detail %>
+  </div>
+  <div class="field">
+    <%= f.label :detail_order %><br />
+    <%= f.number_field :detail_order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

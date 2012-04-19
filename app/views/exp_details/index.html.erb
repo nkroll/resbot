@@ -1,0 +1,27 @@
+<h1>Listing exp_details</h1>
+
+<table>
+  <tr>
+    <th>Experience</th>
+    <th>Detail</th>
+    <th>Detail order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exp_details.each do |exp_detail| %>
+  <tr>
+    <td><%= exp_detail.experience_id %></td>
+    <td><%= exp_detail.detail %></td>
+    <td><%= exp_detail.detail_order %></td>
+    <td><%= link_to 'Show', exp_detail %></td>
+    <td><%= link_to 'Edit', edit_exp_detail_path(exp_detail) %></td>
+    <td><%= link_to 'Destroy', exp_detail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exp detail', new_exp_detail_path %>

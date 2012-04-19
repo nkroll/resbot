@@ -1,0 +1,27 @@
+<h1>Listing edu_details</h1>
+
+<table>
+  <tr>
+    <th>Education</th>
+    <th>Detail</th>
+    <th>Detail order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @edu_details.each do |edu_detail| %>
+  <tr>
+    <td><%= edu_detail.education_id %></td>
+    <td><%= edu_detail.detail %></td>
+    <td><%= edu_detail.detail_order %></td>
+    <td><%= link_to 'Show', edu_detail %></td>
+    <td><%= link_to 'Edit', edit_edu_detail_path(edu_detail) %></td>
+    <td><%= link_to 'Destroy', edu_detail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Edu detail', new_edu_detail_path %>

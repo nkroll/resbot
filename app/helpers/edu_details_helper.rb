@@ -1,0 +1,2 @@
+module EduDetailsHelper
+end

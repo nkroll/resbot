@@ -11,7 +11,54 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419094431) do
+ActiveRecord::Schema.define(:version => 20120419130408) do
+
+  create_table "details", :force => true do |t|
+    t.integer  "exp_or_edu"
+    t.integer  "e_id"
+    t.string   "detail"
+    t.integer  "detail_order"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "edu_details", :force => true do |t|
+    t.integer  "education_id"
+    t.string   "detail"
+    t.integer  "detail_order"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "educations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "study"
+    t.string   "institution"
+    t.string   "institution_url"
+    t.string   "graduation"
+    t.integer  "list_order"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "exp_details", :force => true do |t|
+    t.integer  "experience_id"
+    t.string   "detail"
+    t.integer  "detail_order"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "experiences", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "company"
+    t.string   "company_url"
+    t.string   "date"
+    t.integer  "list_order"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
