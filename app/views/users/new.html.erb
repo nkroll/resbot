@@ -1,5 +1,57 @@
-<h1>New user</h1>
+<!-- Container -->
+<div id="container">
 
-<%= render 'form' %>
+    <!-- Top -->
+	<div class="top"> 
+       <h2>New User!</h2> 
+    </div>
+    <!-- /Top -->
+    
+    <!-- Content -->
+    <div id="content" >
+   
+		<%= form_for(@user) do |f| %>
 
-<%= link_to 'Back', users_path %>
+		  <div style="background:grey">
+			<div class="field">
+			
+		    <%= f.label :name %>
+		    <%= f.text_field :name %>
+		  </div></br>
+		  <div class="field">
+		    <%= f.label :tagline %>
+		    <%= f.text_field :tagline %>
+		  </div></br>
+		  <div class="field">
+		    <%= f.label :description %>
+		    <%= f.text_area :description %>
+		  </div></br>
+		  <div class="field">
+		    <%= f.label :city %>
+		    <%= f.text_field :city %>
+		  </div></br>
+
+		  <div class="field">
+		    <%= f.label :headshot_url %>
+		    <%= f.text_field :headshot_url %>
+		  </div></br>
+
+		  <div class="actions">
+		    <%= f.submit %>
+		  </div>
+		<% end %>
+		
+
+		<%= link_to 'Back', users_path %>
+		</div>
+    </div>
+    <!-- /Content -->
+    
+    <!-- Footer -->
+	<div class="footer">
+    	<div class="copyright">Copyright © 2012 <%= @user.name %></div>
+    </div>
+    <!-- /Footer --> 
+    
+</div>
+<!-- /Container -->

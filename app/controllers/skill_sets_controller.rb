@@ -1,44 +1,29 @@
 class SkillSetsController < ApplicationController
-  # GET /skill_sets
-  # GET /skill_sets.json
+
   def index
     @skill_sets = SkillSet.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @skill_sets }
-    end
   end
 
-  # GET /skill_sets/1
-  # GET /skill_sets/1.json
+
   def show
     @skill_set = SkillSet.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @skill_set }
-    end
   end
 
-  # GET /skill_sets/new
-  # GET /skill_sets/new.json
+
   def new
     @skill_set = SkillSet.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @skill_set }
-    end
+
   end
 
-  # GET /skill_sets/1/edit
+
   def edit
     @skill_set = SkillSet.find(params[:id])
   end
 
-  # POST /skill_sets
-  # POST /skill_sets.json
+
   def create
     @skill_set = SkillSet.new(params[:skill_set])
 
@@ -53,8 +38,7 @@ class SkillSetsController < ApplicationController
     end
   end
 
-  # PUT /skill_sets/1
-  # PUT /skill_sets/1.json
+
   def update
     @skill_set = SkillSet.find(params[:id])
 
@@ -69,15 +53,9 @@ class SkillSetsController < ApplicationController
     end
   end
 
-  # DELETE /skill_sets/1
-  # DELETE /skill_sets/1.json
   def destroy
     @skill_set = SkillSet.find(params[:id])
     @skill_set.destroy
 
-    respond_to do |format|
-      format.html { redirect_to skill_sets_url }
-      format.json { head :no_content }
-    end
   end
 end
