@@ -3,55 +3,44 @@
 
     <!-- Top -->
 	<div class="top"> 
-       <h2>New User!</h2> 
     </div>
     <!-- /Top -->
     
     <!-- Content -->
     <div id="content" >
-   
-		<%= form_for(@user) do |f| %>
 
-		  <div style="background:grey">
-			<div class="field">
-			
-		    <%= f.label :name %>
-		    <%= f.text_field :name %>
-		  </div></br>
-		  <div class="field">
-		    <%= f.label :tagline %>
-		    <%= f.text_field :tagline %>
-		  </div></br>
-		  <div class="field">
-		    <%= f.label :description %>
-		    <%= f.text_area :description %>
-		  </div></br>
-		  <div class="field">
-		    <%= f.label :city %>
-		    <%= f.text_field :city %>
-		  </div></br>
-
-		  <div class="field">
-		    <%= f.label :headshot_url %>
-		    <%= f.text_field :headshot_url %>
-		  </div></br>
-
-		  <div class="actions">
-		    <%= f.submit %>
-		  </div>
-		<% end %>
-		
-
-		<%= link_to 'Back', users_path %>
-		</div>
+   		<!-- New User Sign Up  -->
+        <div class="contact-form">
+	        <h3 class="main-heading"><span>New User!</span></h3>
+            <div id="contact-status"></div>
+			<%= form_for(@user, :html => {:id => "contactform"}) do |f| %>
+		    <p>
+				<%= f.label :name %>
+				<%= f.text_field(:name, :class => "input") %>
+			</p>			
+			<p>
+			    <%= f.label :tagline %>
+			    <%= f.text_field(:tagline, :class => "input") %>				
+			</p>
+			<p>
+		    	<%= f.label :description %>
+		    	<%= f.text_area(:description, :class => "textarea", :cols =>"88", :rows => "6" ) %>
+			</p>
+			<p>
+		    	<%= f.label :city %>
+		    	<%= f.text_field(:city, :class => "input") %>
+		    </p>
+			<p>
+				<%= f.label :headshot_url %>
+		    	<%= f.text_field(:headshot_url, :class => "input") %>
+		    </p>
+			<%= f.submit(:class => "submit") %>
+			<% end %>
+		</div>	
+		<!-- /New User Sign up -->
+        
     </div>
     <!-- /Content -->
-    
-    <!-- Footer -->
-	<div class="footer">
-    	<div class="copyright">Copyright © 2012 <%= @user.name %></div>
-    </div>
-    <!-- /Footer --> 
     
 </div>
 <!-- /Container -->

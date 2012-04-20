@@ -46,7 +46,7 @@
         	<ul class="personal-info">
 				<li><label>Name</label><span><%= @user.name %></span></li>
                 <li><label>City</label><span><%= @user.city %></span></li>
-				<li><label>Email</label><span><%= @user.email %></span></li>
+				<li><label>Email</label><span></span></li>
             </ul>
             <!-- /Personal info section -->
         </div>        
@@ -90,7 +90,6 @@
                 <!-- Timeline for Education  -->   
                 <h3 class="main-heading"><span>Education</span></h3>   
                  <ul class="timeline">
-	 				<!-- Show User's Education sorted by .list_order -->
 	                   <% @educations.order("list_order ASC").each do |educ| %>	
                 	    <li>            
 	                        <div class="timelineUnit">
@@ -102,8 +101,6 @@
 	                        </div>
 	                    </li>
 					<% end %>
-					<!-- End Education Loop -->
-
                      <div class="clear"></div>
                 </ul> 
                 <!-- /Timeline for Education  -->              
@@ -111,7 +108,6 @@
             <div class="skills-section">
                 <!-- Skills -->
 				<% @skillsets.each do |ski| %>
-
                 <h3 class="main-heading"><span><%= ski.skill_name %></span></h3> 
                 <ul class="skills">
 				<% ski.skills.each do |indski| %>
