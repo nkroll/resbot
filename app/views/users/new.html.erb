@@ -8,12 +8,11 @@
     
     <!-- Content -->
     <div id="content" >
-
    		<!-- New User Sign Up  -->
-        <div class="contact-form">
+        <div class="userreg-form">
 	        <h3 class="main-heading"><span>New User!</span></h3>
-            <div id="contact-status"></div>
-			<%= form_for(@user, :html => {:id => "contactform"}) do |f| %>
+            <div id="userreg-status"></div>
+			<%= form_for(@user, :html => {:id => "userregform"}) do |f| %>
 		    <p>
 				<%= f.label :name %>
 				<%= f.text_field(:name, :class => "input") %>
@@ -34,7 +33,7 @@
 				<%= f.label :headshot_url %>
 		    	<%= f.text_field(:headshot_url, :class => "input") %>
 		    </p>
-			<%= f.submit(:class => "submit") %>
+			<%= f.submit(:class => "submit", :value => "Resumebot It!") %>
 			<% end %>
 		</div>	
 		<!-- /New User Sign up -->
