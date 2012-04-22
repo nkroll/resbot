@@ -18,9 +18,9 @@
         <!-- Social Icons -->
         <ul class="socialicons">
         	<li><a href="#" class="social-text">SOCIAL PROFILES</a></li>
-        	<li><a href="<%= @user.facebook_url %>" class="social-facebook"></a></li>
-            <li><a href="<%= @user.twitter_url %>" class="social-twitter"></a></li>
-            <li><a href="<%= @user.linkedin_url %>" class="social-in"></a></li>
+        	<li><a href="<%= @user.facebook %>" class="social-facebook"></a></li>
+            <li><a href="<%= @user.twitter %>" class="social-twitter"></a></li>
+            <li><a href="<%= @user.linkedin %>" class="social-in"></a></li>
         </ul>
         <!-- /Social Icons -->
     </div>
@@ -34,11 +34,11 @@
          	<!-- About section -->
         	<div class="about">
             	<div class="photo-inner">
-					<img src="../assets/<%= @user.headshot_url %>" height="186" />
+					<img src="<%= @user.picture %>" width="170" />
 				</div>
                 <h1><%= @user.name %></h1>
                 <h3><%= @user.tagline %></h3>
-                <p><%= @user.description %></p>
+                <p><%= description? %></p>
             </div>
             <!-- /About section -->
              
