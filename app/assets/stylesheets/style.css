@@ -25,6 +25,7 @@
 		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 	}
 	
+
 	#field {
 		margin:20px;
 		padding:20px;
@@ -195,6 +196,7 @@
 	.about p {
 		font-size:14px;
 		margin-top:15px;
+		margin-bottom:10px;
 		color:#bc9010;
 		line-height:20px;
 	}
@@ -203,7 +205,6 @@
 		float:left;
 		margin-top:30px;
 		width:310px;
-		min-height:230px;
 		margin-left:10px;
 		background:url(../assets/images/personal-info-sep.png) no-repeat left top;
 		padding:20px 0 0 20px;
@@ -747,6 +748,7 @@
 	#container {
 		width:750px;
 	}
+	
 	/*-------------------------------------------------------*/
 		/* Profile Section */
 	/*-------------------------------------------------------*/
@@ -974,7 +976,6 @@
 		background:none;
 		border-top:1px solid #fdc62a;
 		margin-left:10px;
-		min-height:220px;
 		padding-left:0;
 	}
 	.personal-info li {

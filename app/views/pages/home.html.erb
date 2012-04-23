@@ -1,7 +1,33 @@
-<div style="text-align:center;margin-top:200px">
-<h1><strong>ResumeBot</strong></h1></br>
-<h3>Craft a beautifully professional resume in seconds!</h3></br>
 
-<h3 style="color:blue"><%= link_to "See a Sample!", user_path(@demo) %></h3></br>
-<h3 style="color:blue"><%= link_to "Get Started!", new_user_path %></h3>
+<!-- Container -->
+<div id="container">
+
+    <!-- Top -->
+	<div class="top"> 
+    	<!-- Logo -->
+    	<div id="logo" style="display: block; ">
+        	<h2>Resume Robot</h2>
+            <h4>Online resumes for $1 month.</h4>
+        </div>
+        <!-- /Logo -->
+        
+    </div>
+    <!-- /Top -->
+    
+    <!-- Content -->
+    <div id="content" >
+			<%= image_tag "resume_robot.png", :title => "Resume Robot", :class => "resume_robot" %>
+  			<%= link_to image_tag("nav_ie.png", :class => "nav", :id => "nav_ie"), user_path(@demo) %>	
+			<%= link_to image_tag("nav_new.png", :class => "nav", :id => "nav_new"), new_user_path  %>
+    </div>	
+<!-- /Content -->
+    
+    <!-- Footer -->
+	<div class="footer">
+    	<div class="copyright">Copyright © 2012</div>
+    </div>
+    <!-- /Footer --> 
+    
 </div>
+<!-- /Container -->
+
